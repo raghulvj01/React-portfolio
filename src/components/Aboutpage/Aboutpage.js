@@ -20,11 +20,11 @@ function Aboutpage() {
                                     <li>Linux</li>
                                     <li>HTML5/CSS3</li>
                                     <li>JavaScript</li>
-                                    <li>Java</li>
-                                    <li>Python</li>
                                 </Col>
                                 <Col md={5}>
                                     <li>React Js</li>
+                                    <li>Java</li>
+                                    <li>Python</li>
                                     <li>C-programming</li>
                                     <li>Leadership</li> 
                                 </Col>
