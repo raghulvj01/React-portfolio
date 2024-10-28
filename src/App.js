@@ -8,7 +8,25 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Project from './pages/Project';
 import Contact from './pages/Contact';
+import { datadogRum } from '@datadog/browser-rum';
 
+datadogRum.init({
+    applicationId: '048bc5e3-96c3-4473-ad44-1df08cc7038f',
+    clientToken: 'pubfd821498b5885fe140a11b980610e90d',
+    // `site` refers to the Datadog site parameter of your organization
+    // see https://docs.datadoghq.com/getting_started/site/
+    site: 'datadoghq.com',
+    service: 'react',
+    env: 'prod',
+    // Specify a version number to identify the deployed version of your application in Datadog
+    // version: '1.0.0',
+    sessionSampleRate: 100,
+    sessionReplaySampleRate: 20,
+    trackUserInteractions: true,
+    trackResources: true,
+    trackLongTasks: true,
+    defaultPrivacyLevel: 'mask-user-input',
+});
 function App() {
   const [load, upadateLoad] = useState(true);
   const [mousePosition, setMousePosition] = useState({
